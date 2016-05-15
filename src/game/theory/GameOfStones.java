@@ -20,7 +20,7 @@ public class GameOfStones {
         int[] dp = new int[n + 1];
         dp[1] = 2;
         dp[2] = dp[3] = dp[4] = dp[5] = 1;
-        for (int i = 6; i < n; i++) {
+        for (int i = 6; i <= n; i++) {
             dp[i] = dp[i - 2] + dp[i - 3] + dp[i - 5] > 3 ? 1 : 2;
         }
         return dp;
