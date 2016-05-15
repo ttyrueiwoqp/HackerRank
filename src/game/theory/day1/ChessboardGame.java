@@ -1,25 +1,20 @@
-package game.theory;
+package game.theory.day1;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Scanner;
 
-public class TowerBreakers {
+public class ChessboardGame {
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for (int i = 0; i < t; i++) {
-            int n = sc.nextInt();
-            int m = sc.nextInt();
-            System.out.println(solve(n, m));
+            int x = sc.nextInt() - 1;
+            int y = sc.nextInt() - 1;
+            System.out.println(x / 2 % 2 == 0 && y / 2 % 2 == 0 ? "Second" : "First");
         }
-
     }
 
-    private static int solve(int n, int m) {
-        if (m == 1) {
-            return 2;
-        }
-        return 2 - n % 2;
-    }
 }

@@ -1,4 +1,4 @@
-package game.theory;
+package game.theory.day1;
 
 import java.util.Scanner;
 
